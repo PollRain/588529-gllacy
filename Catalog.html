@@ -46,6 +46,68 @@
     </header>
     <main class="conteiner">
     <h1>Сливочное мороженое</h1>
+    <!--Фильтр-->
+     <form class="filter" action="https://echo.htmlacademy.ru" method="get">
+       <fieldset>
+         <legend>Сортировка:</legend>
+         <select>
+           <option value="popular">По популярности</option>
+         </select>
+       </fieldset>
+       <fieldset>
+         <legend>Цена:</legend>
+        <!--Тут будет двойной бегунок с выбором цены-->
+
+       </fieldset>
+       <fieldset>
+         <legend>Жирность:</legend>
+         <ul>
+           <li class="fat-content">
+             <input class="filter-input filter-input-radio" name="fat-content-item" type="radio" value="fat-0%" id="filter-fat-0">
+             <label for="filter-fat-0">0%</label>
+           </li>
+           <li class="fat-content">
+             <input class="filter-input filter-input-radio" name="fat-content-item" type="radio" value="fat-before-10%" id="filter-fat-before-10" checked>
+             <label for="filter-fat-before-10">до 10%</label>
+           </li>
+           <li class="fat-content">
+             <input class="filter-input filter-input-radio" name="fat-content-item" type="radio" value="fat-before-30%" id="filter-fat-before-30">
+             <label for="filter-fat-before-30">до 30%</label>
+           </li>
+           <li class="fat-content">
+             <input class="filter-input filter-input-radio" name="fat-content-item" type="radio" value="fat-after-30%" id="filter-fat-after-30">
+             <label for="filter-fat-after-30">выше 30%</label>
+           </li>
+         </ul>
+       </fieldset>
+       <fieldset>
+         <legend>Наполнители:</legend>
+         <ul>
+           <li class="fillers">
+             <input class="filter-input filter-input-chekbox" name="fillers-item" type="checkbox" value="chocolade" id="filter-chocolade" checked>
+             <label for="filter-chocolade">шоколадные</label>
+           </li>
+           <li class="fillers">
+             <input class="filter-input filter-input-chekbox" name="fillers-item" type="checkbox" value="sugar" id="filter-sugar" checked>
+             <label for="filter-sugar">сахарные присыпки</label>
+           </li>
+           <li class="fillers">
+             <input class="filter-input filter-input-chekbox" name="fillers-item" type="checkbox" value="fruits" id="filter-fruits">
+             <label for="filter-fruits">фрукты</label>
+           </li>
+           <li class="fillers">
+             <input class="filter-input filter-input-chekbox" name="fillers-item" type="checkbox" value="syrups" id="filter-syrups">
+             <label for="filter-syrups">сиропы</label>
+           </li>
+           <li class="fillers">
+             <input class="filter-input filter-input-chekbox" name="fillers-item" type="checkbox" value="jam" id="filter-jam">
+             <label for="filter-jam">джемы</label>
+           </li>
+         </ul>
+       </fieldset>
+       <input type="submit" value="Применить">
+
+     </form>
       <ul class="ice-creams">
         <li class="ice-creams-item">
           <img src="img/catalog-img/logo-ice-cream-1.jpg" alt="логотип сливочное с апельсиновым джемом и цитрусовой стружкой">
@@ -121,10 +183,10 @@
     <footer class="footer">
       <div class="footer-social">
         <ul>
-          <li><a class="social-button" href="#">твитер</a></li>
-          <li><a class="social-button" href="#">инстаграмм</a></li>
-          <li><a class="social-button" href="#">фейсбук</a></li>
-          <li><a class="social-button" href="#">вконтакте</a></li>
+          <li><a class="social-button" href="#" aria-label="твитер"><img src="img/svg/twitter.svg" alt="логотип твитера"></a></li>
+          <li><a class="social-button" href="#" aria-label="инстаграм"><img src="img/svg/instagram.svg" alt="логотип инстаграм"></a></li>
+          <li><a class="social-button" href="#" aria-label="фейсбук"><img src="img/svg/fb.svg" alt="логотип фейсбук"></a></li>
+          <li><a class="social-button" href="#" aria-label="вконтакте"><img src="img/svg/vk.svg" alt="логотип вконтакте"></a></li>
         </ul>
       </div>
 
@@ -134,7 +196,7 @@
         <a class="footer-information-item" href="our-documents">Наши документы</a>
         <a class="footer-information-item" href="environmental-standards">Экологические стандарты</a>
       </div>
-      <a class="logo-htmlacademy" href="https://htmlacademy.ru/">
+      <a class="logo-htmlacademy" href="https://htmlacademy.ru/" aria-label="гавная страница htmlacademy">
         <img width="150" src="img/svg/logo-htmlacademy.svg" alt="логотип html academy">
       </a>
       <p>Сделано в HTML academy © 2017</p>
