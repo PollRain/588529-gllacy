@@ -291,6 +291,14 @@ body {
   line-height: 18px;
 }
 
+.footer p a {
+  color: #ffffff;
+}
+.footer p {
+  font-size: 12px;
+  line-height: 16px;
+}
+
 .footer-information a:not(:first-child),
 .footer p {
   font-weight: 400;
@@ -299,7 +307,9 @@ body {
 .footer-information a:hover,
 .footer-information a:focus,
 .footer-social a:hover,
-.footer-social a:focus {
+.footer-social a:focus,
+.footer p a:hover,
+.footer p a:focus {
   color: #ffbc9e;
 }
 
