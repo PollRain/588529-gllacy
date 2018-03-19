@@ -10,6 +10,9 @@ body {
 
   background-color: #849d8f;
 }
+.visually-hidden {
+  display: none;
+}
 /*Стилизация шапки сайта(навигация) */
 .navigation {
   line-height: 18px;
@@ -46,7 +49,7 @@ body {
   line-height: 16px;
 }
 
-.contact-nuber {
+.contact-number {
   font-size: 22px;
   line-height: 24px;
 }
@@ -79,7 +82,8 @@ body {
 }
 .lets-both a:hover,
 .lets-both a:focus {
-  background-color: rgba(240, 100, 65, 0.8);
+  background-color: #ef7661;
+  box-shadow: 0 2px 2px 0 #9e4334;
 }
 
 .lets-both:not(:first-child) {
@@ -132,20 +136,25 @@ body {
 .raspberries a:focus,
 .chocolate a:hover,
 .chocolate a:focus {
-  background-color: rgba(240, 100, 65, 0.8);
+  background-color: #ef7661;
+  box-shadow: 0 2px 2px 0 #9e4334;
 }
 
 /*Лучший выбор*/
-.ice-cream-hit {
+.ice-cream-hit,
+.ice-creams {
   list-style: none;
 }
 
 .ice-cream-hit-item:hover,
-.ice-cream-hit-item:focus {
+.ice-cream-hit-item:focus,
+.ice-creams-item:hover,
+.ice-creams-item:focus {
   background-color: #9bafa3;
 }
 
-.ice-cream-hit-item .button {
+.ice-cream-hit-item .button,
+.ice-creams-item .button {
   position: absolute;
   font-size: 18px;
   line-height: 24px;
@@ -155,24 +164,34 @@ body {
   text-decoration: none;
 }
 .ice-cream-hit-item .button:hover,
-.ice-cream-hit-item .button:focus {
-  background-color: rgba(240, 100, 65, 0.8);
+.ice-cream-hit-item .button:focus,
+.ice-creams-item .button:hover,
+.ice-creams-item .button:focus {
+  background-color: #ef7661;
+  box-shadow: 0 2px 2px 0 #9e4334;
 }
 .ice-cream-hit-item:hover .button,
-.ice-cream-hit-item:focus .button {
+.ice-cream-hit-item:focus .button,
+.ice-creams-item:hover .button,
+.ice-creams-item:focus .button {
   display: block;
 }
 
 .ice-cream-hit-item:hover,
-.ice-cream-hit-item:focus {
+.ice-cream-hit-item:focus,
+.ice-creams-item:hover,
+.ice-creams-item:focus {
   background-color: #9bafa3;
 }
-.ice-cream-hit-item a:focus,
-.ice-cream-hit-item a:hover {
+.ice-cream-hit-item a:not(.button):focus,
+.ice-cream-hit-item a:not(.button):hover,
+.ice-creams-item a:not(.button):hover,
+.ice-creams-item a:not(.button):focus {
   color: #ffbc9e ;
 }
 
-.ice-cream-hit-item a {
+.ice-cream-hit-item a,
+.ice-creams-item a {
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
@@ -228,6 +247,11 @@ body {
   background-color: #ed5a3d;
 }
 
+.subscription form .button:hover,
+.subscription form .button:focus {
+  background-color: #ef7661;
+  box-shadow: 0 2px 2px 0 #9e4334;
+}
 /*Контактная информация*/
 .adres-and-contacts {
   color: #323232;
@@ -255,7 +279,8 @@ body {
 
 .adres-and-contacts a:hover,
 .adres-and-contacts a:focus {
-  background-color: rgba(240, 100, 65, 0.8);
+  background-color: #ef7661;
+  box-shadow: 0 2px 2px 0 #9e4334;
 }
 
 /*Футер*/
@@ -266,7 +291,8 @@ body {
   line-height: 18px;
 }
 
-.footer-information a:not(:first-child) {
+.footer-information a:not(:first-child),
+.footer p {
   font-weight: 400;
 }
 
@@ -275,4 +301,80 @@ body {
 .footer-social a:hover,
 .footer-social a:focus {
   color: #ffbc9e;
+}
+
+/*КАТАЛОГ*/
+.site-navigation .catalog {
+  background-color: #ed5a3d;
+  color: #ffffff;
+}
+
+.catalog-header a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+}
+.catalog-header a:hover,
+.catalog-header a:focus {
+  color: #ffbc9e;
+}
+
+.conteiner-catalog {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.filter fieldset{
+  border: none;
+}
+
+.on-popular,
+.fat,
+.fillers {
+  background-color: #a9bab0;
+}
+
+.fat,
+.fillers {
+  list-style: none;
+}
+
+.filter .button {
+  background-color: #a9bab0;
+  box-shadow: 0 0 0 1px #ffffff;
+}
+
+.filter .button:hover,
+.filter .button:focus {
+  background-color: #ffffff;
+  color: #353535;
+}
+
+.on-popular:hover,
+.on-popular:focus {
+  color: #353535;
+}
+
+.pages {
+  list-style: none;
+}
+.pages li a{
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.pages li a:hover,
+.pages li a:focus {
+  color: #ed5a3d;
+}
+
+.pages li span {
+  color: #353535;
+  background-color: #ffffff;
 }

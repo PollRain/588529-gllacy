@@ -3,27 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
   </head>
   <body>
-    <style>
-    body{
-     background-color: #849d8f;
-     }
-    </style><!--Временный стиль, для проверки логотипов-->
     <header class="main-header">
-      <nav class="main-navigation">
+      <nav class="navigation">
         <a class="header-logo" href="index.html">
           <img src="img/svg/logo.svg" alt="логотип магазина мороженого gllacyshop">
         </a>
         <ul class="site-navigation">
-          <li><a href="catalog.html">Каталог</a><!--должен быть выделен, по скольку мы находимся в меню каталога-->
-            <ul class="catalog-navigation">
-              <li><a href="#">Новинки</a></li>
-              <li><a href="catalog.html">Сливочное</a></li>
-              <li><a href="catalog.html">Щербеты</a></li>
-              <li><a href="catalog.html">Фруктовый лед</a></li>
-              <li><a href="catalog.html">Мелорин</a></li>
-            </ul>
+          <li>
+            <span class="catalog">Каталог</span>
+            <a href="#">Новинки</a>
+            <a href="catalog.html">Сливочное</a>
+            <a href="catalog.html">Щербеты</a>
+            <a href="catalog.html">Фруктовый лед</a>
+            <a href="catalog.html">Мелорин</a>
           </li>
           <li><a href="delivery-and-payment.html">Доставка и оплата</a></li>
           <li><a href="about-company.html">О компании</a></li>
@@ -35,22 +32,20 @@
         </ul>
       </nav>
       <b class="working-hours">С 10 до 20, ежедневно<br></b>
-      <b class="contact-nuber">8 812 450-25-25</b>
+      <b class="contact-number">8 812 450-25-25</b>
     </header>
     <header class="catalog-header">
-      <ul class="catalog-navigation">
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="catalog.html">Каталог</a></li>
-        <li><a href="catalog.html">Сливочное</a></li>
-      </ul>
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="catalog.html">Сливочное</a>
     </header>
-    <main class="conteiner">
+    <main class="conteiner-catalog">
     <h1>Сливочное мороженое</h1>
     <!--Фильтр-->
      <form class="filter" action="https://echo.htmlacademy.ru" method="get">
        <fieldset>
          <legend>Сортировка:</legend>
-         <select>
+         <select class="on-popular">
            <option value="popular">По популярности</option>
          </select>
        </fieldset>
@@ -61,7 +56,7 @@
        </fieldset>
        <fieldset>
          <legend>Жирность:</legend>
-         <ul>
+         <ul class="fat">
            <li class="fat-content">
              <input class="filter-input filter-input-radio" name="fat-content-item" type="radio" value="fat-0%" id="filter-fat-0">
              <label for="filter-fat-0">0%</label>
@@ -82,30 +77,30 @@
        </fieldset>
        <fieldset>
          <legend>Наполнители:</legend>
-         <ul>
-           <li class="fillers">
+         <ul class="fillers">
+           <li class="fillers-item">
              <input class="filter-input filter-input-chekbox" name="fillers-item" type="checkbox" value="chocolade" id="filter-chocolade" checked>
              <label for="filter-chocolade">шоколадные</label>
            </li>
-           <li class="fillers">
+           <li class="fillers-item">
              <input class="filter-input filter-input-chekbox" name="fillers-item" type="checkbox" value="sugar" id="filter-sugar" checked>
              <label for="filter-sugar">сахарные присыпки</label>
            </li>
-           <li class="fillers">
+           <li class="fillers-item">
              <input class="filter-input filter-input-chekbox" name="fillers-item" type="checkbox" value="fruits" id="filter-fruits">
              <label for="filter-fruits">фрукты</label>
            </li>
-           <li class="fillers">
+           <li class="fillers-item">
              <input class="filter-input filter-input-chekbox" name="fillers-item" type="checkbox" value="syrups" id="filter-syrups">
              <label for="filter-syrups">сиропы</label>
            </li>
-           <li class="fillers">
+           <li class="fillers-item">
              <input class="filter-input filter-input-chekbox" name="fillers-item" type="checkbox" value="jam" id="filter-jam">
              <label for="filter-jam">джемы</label>
            </li>
          </ul>
        </fieldset>
-       <input type="submit" value="Применить">
+       <input class="button" type="submit" value="Применить">
 
      </form>
       <ul class="ice-creams">
@@ -113,65 +108,77 @@
           <img src="img/catalog-img/logo-ice-cream-1.jpg" alt="логотип сливочное с апельсиновым джемом и цитрусовой стружкой">
             310 ₽/кг
           <a href="busket.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+          <a class="button" href="#">Быстрый просмотр</a>
         </li>
         <li class="ice-creams-item">
           <img src="img/catalog-img/logo-ice-cream-2.jpg" alt="логотип cливочно-кофейное с кусочками шоколада">
             380 ₽/кг
           <a href="busket.html">Сливочно-кофейное с кусочками шоколада</a>
+          <a class="button" href="#">Быстрый просмотр</a>
         </li>
         <li class="ice-creams-item">
           <img src="img/catalog-img/logo-ice-cream-3.jpg" alt="логотип сливочно-клубничное с присыпкой из белого шоколада">
             355 ₽/кг
           <a href="busket.html">Сливочно-клубничное с присыпкой из белого шоколада</a>
+          <a class="button" href="#">Быстрый просмотр</a>
         </li>
         <li class="ice-creams-item">
           <img src="img/catalog-img/logo-ice-cream-4.jpg" alt="логотип сливочное крем-брюле с карамельной подливкой">
             415 ₽/кг
           <a href="busket.html">Сливочное крем-брюле с карамельной подливкой</a>
+          <a class="button" href="#">Быстрый просмотр</a>
         </li>
         <li class="ice-creams-item">
           <img src="img/catalog-img/logo-ice-cream-5.jpg" alt="логотип сливочное с брусничным джемом">
             325 ₽/кг
           <a href="busket.html">Сливочное с брусничным джемом</a>
+          <a class="button" href="#">Быстрый просмотр</a>
         </li>
         <li class="ice-creams-item">
           <img src="img/catalog-img/logo-ice-cream-6.jpg" alt="логотип сливочно-черничное с цельными ягодами черники">
             410 ₽/кг
           <a href="busket.html">Сливочно-черничное с цельными ягодами черники</a>
+          <a class="button" href="#">Быстрый просмотр</a>
         </li>
         <li class="ice-creams-item">
           <img src="img/catalog-img/logo-ice-cream-7.jpg" alt="логотип сливочно-лимонное с карамельной присыпкой">
             375 ₽/кг
           <a href="busket.html">Сливочно-лимонное с карамельной присыпкой</a>
+          <a class="button" href="#">Быстрый просмотр</a>
         </li>
         <li class="ice-creams-item">
           <img src="img/catalog-img/logo-ice-cream-8.jpg" alt="логотип сливочное с шоколадной стружкой">
             320 ₽/кг
           <a href="busket.html">Сливочное с шоколадной стружкой</a>
+          <a class="button" href="#">Быстрый просмотр</a>
         </li>
         <li class="ice-creams-item">
           <img src="img/catalog-img/logo-ice-cream-9.jpg" alt="логотип сливочно-ванильное с кусочками шоколада">
             440 ₽/кг
           <a href="busket.html">Сливочно-ванильное с кусочками шоколада</a>
+          <a class="button" href="#">Быстрый просмотр</a>
         </li>
         <li class="ice-creams-item">
           <img src="img/catalog-img/logo-ice-cream-10.jpg" alt="логотип сливочное с ментоловым сиропом">
             435 ₽/кг
           <a href="busket.html">Сливочное с ментоловым сиропом</a>
+          <a class="button" href="#">Быстрый просмотр</a>
         </li>
         <li class="ice-creams-item">
           <img src="img/catalog-img/logo-ice-cream-11.jpg" alt="логотип сливочное с кусочками черного шоколада">
             355 ₽/кг
           <a href="busket.html">Сливочное с кусочками черного шоколада</a>
+          <a class="button" href="#">Быстрый просмотр</a>
         </li>
         <li class="ice-creams-item">
           <img src="img/catalog-img/logo-ice-cream-12.jpg" alt="логотип сливочное с мятным сиропом">
             420 ₽/кг
           <a href="busket.html">Сливочное с мятным сиропом</a>
+          <a class="button" href="#">Быстрый просмотр</a>
         </li>
       </ul>
       <ul class="pages">
-        <li><a href="catalog1.html">1</a></li>
+        <li><span>1</span></li>
         <li><a href="catalog2.html">2</a></li>
         <li><a href="catalog3.html">3</a></li>
         <li><a href="catalog4.html">4</a></li>
