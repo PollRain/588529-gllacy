@@ -1,3 +1,278 @@
-.lets-both-2, .lets-both-3 {
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  color: #ffffff;
+
+  background-color: #849d8f;
+}
+/*Стилизация шапки сайта(навигация) */
+.navigation {
+  line-height: 18px;
+  color: #ffffff;
+}
+
+.user-navigation {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.site-navigation,
+.user-navigation,
+.catalog-navigation {
+  list-style: none;
+}
+
+.site-navigation a,
+.user-navigation a {
+  color: #ffffff;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus,
+.user-navigation a:hover,
+.user-navigation a:focus {
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.working-hours {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.contact-nuber {
+  font-size: 22px;
+  line-height: 24px;
+}
+/*Слайдер Двойное наслаждение*/
+.double-ice-cream {
+  text-align: center;
+}
+
+.slider-lets-both li:first-child {
+  background-image: url(../img/index-img/cream-brule-and-jam.png);
+}
+.slider-lets-both li:nth-child(2) {
+  background-image: url(../img/index-img/chololate-and-sorbet.png);
+}
+.slider-lets-both li:last-child {
+  background-image: url(../img/index-img/ice-cream-and-sherbet.png);
+}
+
+.lets-both {
+  list-style: none;
+}
+
+.lets-both a {
+  text-decoration: none;
+  font-size: 32px;
+  line-height: 44px;
+  padding: 24px 44px;
+  color: #ffffff;
+  background-color: #ed5a3d;
+}
+.lets-both a:hover,
+.lets-both a:focus {
+  background-color: rgba(240, 100, 65, 0.8);
+}
+
+.lets-both:not(:first-child) {
   display: none;
+}
+
+.lets-both label {
+  font-size: 60px;
+  line-height: 60px;
+}
+
+/*Специальные предложения*/
+.raspberries h3,
+.chocolate h3 {
+  font-size: 35px;
+  line-height: 41px;
+}
+.raspberries p,
+.chocolate p {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.raspberries a,
+.chocolate a {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.raspberries {
+  background-color: #849d8f;
+  background-image: url("../img/index-img/background-raspderries.jpg");
+  background-repeat: no-repeat;
+}
+
+.chocolate {
+  background-color: #849d8f;
+  background-image: url("../img/index-img/background-chocolate.jpg");
+  background-repeat: no-repeat;
+}
+
+.raspberries a,
+.chocolate a{
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #ed5a3d;
+}
+
+.raspberries a:hover,
+.raspberries a:focus,
+.chocolate a:hover,
+.chocolate a:focus {
+  background-color: rgba(240, 100, 65, 0.8);
+}
+
+/*Лучший выбор*/
+.ice-cream-hit {
+  list-style: none;
+}
+
+.ice-cream-hit-item:hover,
+.ice-cream-hit-item:focus {
+  background-color: #9bafa3;
+}
+
+.ice-cream-hit-item .button {
+  position: absolute;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 5px;
+  background-color: #ed5a3d;
+  display: none;
+  text-decoration: none;
+}
+.ice-cream-hit-item .button:hover,
+.ice-cream-hit-item .button:focus {
+  background-color: rgba(240, 100, 65, 0.8);
+}
+.ice-cream-hit-item:hover .button,
+.ice-cream-hit-item:focus .button {
+  display: block;
+}
+
+.ice-cream-hit-item:hover,
+.ice-cream-hit-item:focus {
+  background-color: #9bafa3;
+}
+.ice-cream-hit-item a:focus,
+.ice-cream-hit-item a:hover {
+  color: #ffbc9e ;
+}
+
+.ice-cream-hit-item a {
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+/*Преимущества*/
+.about-gllacyshop {
+  background-color: #ffffff;
+  background-image: url(../img/index-img/background-wafer.jpg);
+  background-repeat: no-repeat;
+  color: #323232;
+}
+.about-gllacyshop h3 {
+  font-size: 24px;
+  line-height: 30px;
+}
+.advantages {
+  list-style: none;
+}
+
+/*Блог*/
+.new-from-the-blog {
+  background-color: #ffffff;
+  background-image: url(../img/index-img/background-blog.jpg);
+  background-repeat: no-repeat;
+  color: #323232;
+}
+.new-from-the-blog h2 {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.new-from-the-blog a {
+  color: #323232;
+  font-size: 24px;
+  line-height: 30px;
+}
+.new-from-the-blog a:hover,
+.new-from-the-blog a:focus{
+  color: #ffbc9e;
+}
+
+/*Подписка*/
+.subscription {
+  background-color: #f8f7f4;
+  color: #5a5a5a;
+}
+
+.subscription form .button {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 24px;
+  background-color: #ed5a3d;
+}
+
+/*Контактная информация*/
+.adres-and-contacts {
+  color: #323232;
+  background-color: #ffffff;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.adres-and-contacts p:nth-child(2),
+.adres-and-contacts p:nth-child(4) {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.adres-and-contacts a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  background-color: #ed5a3d;
+}
+
+.adres-and-contacts a:hover,
+.adres-and-contacts a:focus {
+  background-color: rgba(240, 100, 65, 0.8);
+}
+
+/*Футер*/
+.footer-information a,
+.footer-social a {
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.footer-information a:not(:first-child) {
+  font-weight: 400;
+}
+
+.footer-information a:hover,
+.footer-information a:focus,
+.footer-social a:hover,
+.footer-social a:focus {
+  color: #ffbc9e;
 }

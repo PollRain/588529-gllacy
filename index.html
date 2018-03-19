@@ -3,14 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
   </head>
   <body>
-    <style>
-    body{
-     background-color: #849d8f;
-     }
-    </style><!--Временный стиль, для проверки логотипов-->
     <header class="main-header">
       <nav class="navigation">
         <a class="header-logo">
@@ -48,23 +45,26 @@
         <h2 class="visually-hidden">Двойное наслаждение!</h2>
          <div class="slider">
           <ul class="slider-lets-both">
-            <li  class="lets-both-1">
-              <a href="#">Давайте оба!</a>
+            <li  class="lets-both">
+              <label for="lets-both-cream-brule-and-jam">Крем-брюле и пломбир с малиновым джемом</label>
+              <a class="button" href="#">Давайте оба!</a>
             </li>
-            <li  class="lets-both-2">
-              <a href="#">Давайте оба!</a>
+            <li  class="lets-both">
+              <label for="lets-both-chololate-and-sorbet">Шоколадный пломбир и лимонный сорбет</label>
+              <a class="button" href="#">Давайте оба!</a>
             </li>
-            <li  class="lets-both-3">
-              <a href="#">Давайте оба!</a>
+            <li  class="lets-both">
+              <label for="lets-both-ice-cream-and-sherbet">Пломбир с помадкой и клубничный щербет</label>
+              <a class="button" href="#">Давайте оба!</a>
             </li>
           </ul>
           <div class="toggle-lets-both-item">
-            <input class="lets-both-input lets-both-input-radio" type="radio" name="lets-both-item" value="cream-brule-and-jam" id="lets-both-cream-brule-and-jam" checked>
-            <label for="lets-both-cream-brule-and-jam">Крем-брюле и пломбир с малиновым джемом</label>
-            <input class="lets-both-input lets-both-input-radio" type="radio" name="lets-both-item" value="chololate-and-sorbet" id="lets-both-chololate-and-sorbet">
-            <label for="lets-both-chololate-and-sorbet">Шоколадный пломбир и лимонный сорбет</label>
-            <input class="lets-both-input lets-both-input-radio" type="radio" name="lets-both-item" value="ice-cream-and-sherbet" id="lets-both-ice-cream-and-sherbet">
-            <label for="lets-both-ice-cream-and-sherbet">Пломбир с помадкой и клубничный щербет</label>
+            <button class="lets-both-input lets-both-input-button" type="button" name="lets-both-item" value="cream-brule-and-jam" id="lets-both-cream-brule-and-jam">
+            </button>
+            <button class="lets-both-input lets-both-input-button" type="button" name="lets-both-item" value="chololate-and-sorbet" id="lets-both-chololate-and-sorbet">
+            </button>
+            <button class="lets-both-input lets-both-input-button" type="button" name="lets-both-item" value="ice-cream-and-sherbet" id="lets-both-ice-cream-and-sherbet">
+            </button>
           </div>
         </div>
       </section>
@@ -75,10 +75,10 @@
         <p>При покупке 2кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно</p>
         <a class="button" href="raspberries.html">Хочу варенье!</a>
       </section>
-      <section class="chololate">
+      <section class="chocolate">
         <h3>Шоколадки даром!</h3>
         <p>При покупке 2кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-        <a class="button" href="chololate.html">Хочу шоколаки!</a>
+        <a class="button" href="chocolate.html">Хочу шоколаки!</a>
       </section>
 
       <h2 class="visually-hidden">Лучший выбор</h2>
@@ -86,23 +86,29 @@
         <ul class="ice-cream-hit">
           <li class="ice-cream-hit-item">
             <img src="img/catalog-img/logo-ice-cream-1.jpg" alt="логотип сливочного с апельсиновым джемом и цитрусовой стружкой">
-            310 р/кг
+            310 ₽/кг
             <a href="busket.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+            <a class="button" href="#">Быстрый просмотр</a>
           </li>
           <li class="ice-cream-hit-item">
             <img src="img/catalog-img/logo-ice-cream-2.jpg" alt="логотип cливочно-кофейного с кусочками шоколада">
-            380 р/кг
+            380 ₽/кг
             <a href="busket.html">Сливочно-кофейное с кусочками шоколада</a>
+            <a class="button" href="#">Быстрый просмотр</a>
           </li>
           <li class="ice-cream-hit-item">
             <img src="img/catalog-img/logo-ice-cream-3.jpg" alt="логотип сливочно-клубничного с присыпкой из белого шоколада">
-            355 р/кг
+            355 ₽/кг
             <a href="busket.html">Сливочно-клубничное с присыпкой из белого шоколада</a>
+            <a Class="button" href="#">Быстрый просмотр</a>
           </li>
           <li class="ice-cream-hit-item">
             <img src="img/catalog-img/logo-ice-cream-4.jpg" alt="логотип сливочного крем-брюле с карамельной подливкой">
-            415 р/кг
+            415 ₽/кг<!--Не могу понять параметры(размер и прочее). 415₽ - один размер шрифта,
+               а у /кг - видимо другой, но в фотошопе отражают только высоту строки.
+                предполагаю что img тут тоже не к месту, поскольку выглядит для цены background-ом с верхним расположением в блоке. -->
             <a href="busket.html">Сливочное крем-брюле с карамельной подливкой</a>
+            <a Class="button" href="#">Быстрый просмотр</a>
           </li>
         </ul>
       </section>
@@ -124,7 +130,7 @@
 
        <article class="new-from-the-blog">
          <h2>Новое в нашем блоге</h2>
-         <h3><a href="#"> 10 способов сервировки фруктовых щербетов к столу</a></h3>
+         <a href="#"> 10 способов сервировки фруктовых щербетов к столу</a>
        </article>
 
        <h2 class="visually-hidden">Подписка</h2>
@@ -138,18 +144,16 @@
           </form>
         </div>
 
+       <h2 class="visually-hidden">Контактная информация</h2>
        <section class="adres-and-contacts">
-         <h2 class="visually-hidden">Контактная информация</h2>
-           <p>Адрес главного офиса
-            и офлайн-магазина:
-            ул.Большая Конюшенная
-            19/8, Санкт-Петербург
-           </p>
-           <p>Для заказов по телефону:
-              8 812 450-25-25
-              (с 10 до 20 ежедневно)
-           </p>
-           <p><a href="#">Форма обратной связи</a></p>
+
+         <p>Адрес главного офиса и офлайн-магазина:</p>
+         <p>ул.Большая Конюшенная 19/8, Санкт-Петербург</p>
+         <p>Для заказов по телефону:</p>
+         <p>8 812 450-25-25</p>
+         <p>(с 10 до 20 ежедневно)</p>
+         <a class="button" href="#">Форма обратной связи</a>
+
         </section>
 
         <h2 class="visually-hidden">Наше расположение на карте</h2>
