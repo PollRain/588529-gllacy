@@ -19,6 +19,12 @@ body {
   color: #ffffff;
 }
 
+.site-navigation{
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .user-navigation {
   font-size: 14px;
   line-height: 18px;
@@ -26,33 +32,46 @@ body {
 
 .site-navigation,
 .user-navigation,
-.catalog-navigation {
+.submenu {
   list-style: none;
 }
-
-.site-navigation a,
-.user-navigation a {
+.site-navigation a {
   color: #ffffff;
 }
 
-.site-navigation a:hover,
-.site-navigation a:focus,
-.user-navigation a:hover,
-.user-navigation a:focus {
-  text-decoration: none;
-  background-color: #ffffff;
-  color: #000000;
+.site-navigation .submenu a {
+color: #353535;
+text-decoration: none;
 }
 
-.working-hours {
-  font-size: 14px;
-  line-height: 16px;
+.site-navigation .submenu li:not(:first-child) {
+  font-weight: 400;
 }
 
-.contact-number {
-  font-size: 22px;
-  line-height: 24px;
+.submenu {
+  position: absolute;
+  top: 102px;
+  left: 33px;
+  width: 130px;
+  height: 110px;
+  padding-left: 7px;
+  background: #f8f7f4;
 }
+
+ .navigation-item a:hover{
+ background-color: white;
+ color: black;
+ text-decoration: none;
+}
+.submenu a:hover,
+.submenu a:focus {
+  background: #fbded8;
+}
+.submenu li:hover,
+.submenu li:focus {
+  background: #fbded8;
+}
+
 /*Слайдер Двойное наслаждение*/
 .double-ice-cream {
   text-align: center;
