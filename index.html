@@ -10,9 +10,11 @@
   <body>
     <header class="main-header">
       <nav class="navigation">
-        <a class="header-logo">
-          <img src="img/svg/logo.svg" alt="логотип магазина мороженого gllacyshop">
+        <div class="navigation-wrapper">
+        <a>
+          <img class="header-logo" src="img/svg/logo.svg" alt="логотип магазина мороженого gllacyshop">
         </a>
+
         <ul class="site-navigation">
           <li class="navigation-item">
             <a class="navigation-link" href="catalog.html">Каталог</a>
@@ -32,11 +34,16 @@
           <li class="user-navigation-item"><a class="user-navigation-link" href="login-link.html">Вход</a></li>
           <li class="user-navigation-item"><a class="user-navigation-link" href="basket-link.html">Корзина</a></li>
         </ul>
-      </nav>
+      </div>
       <div class="Contacts">
         <p class="working-hours">С 10 до 20, ежедневно</p>
         <p class="contact-number">8 812 450-25-25</p>
       </div>
+      </nav>
+      <!--<div class="Contacts">
+        <p class="working-hours">С 10 до 20, ежедневно</p>
+        <p class="contact-number">8 812 450-25-25</p>
+      </div>-->
     </header>
 
     <main class="conteiner">
@@ -59,6 +66,7 @@
               <a class="button" href="#">Давайте оба!</a>
             </li>
           </ul>
+        </div>
           <div class="toggle-lets-both-item">
             <button class="lets-both-input lets-both-input-button" type="button" name="lets-both-item" value="cream-brule-and-jam" id="lets-both-cream-brule-and-jam">
             </button>
@@ -67,10 +75,10 @@
             <button class="lets-both-input lets-both-input-button" type="button" name="lets-both-item" value="ice-cream-and-sherbet" id="lets-both-ice-cream-and-sherbet">
             </button>
           </div>
-        </div>
       </section>
 
       <h2 class="visually-hidden">Специальные предложения</h2>
+      <div class="special-offer">
       <section class="raspberries">
         <h3>Малинка даром</h3>
         <p>При покупке 2кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно</p>
@@ -81,6 +89,7 @@
         <p>При покупке 2кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
         <a class="button" href="chocolate.html">Хочу шоколаки!</a>
       </section>
+    </div>
 
       <h2 class="visually-hidden">Лучший выбор</h2>
       <section class="best-choise">
@@ -111,7 +120,7 @@
           </li>
         </ul>
       </section>
-
+<div class="advantages-conteiner">
       <section class="about-gllacyshop">
         <h2 class="visually-hidden">Преимущества</h2>
         <h3>Магазин Глэйси - это онлайн- и офлайн-магазин по продаже мороженого собственного  производства на разновес</h3>
@@ -126,14 +135,15 @@
             который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус</li>
          </ul>
        </section>
-
+</div>
+      <div class="blog-and-subscription">
        <article class="new-from-the-blog">
          <h2>Новое в нашем блоге</h2>
          <a href="#"> 10 способов сервировки фруктовых щербетов к столу</a>
        </article>
 
        <h2 class="visually-hidden">Подписка</h2>
-        <div class="subscription">
+          <div class="subscription">
           <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит.
          Обещаем не спамить и не слать всякой ненужной ерунды. Честно:)</p>
          <!--Форма ввода эетронной почты-->
@@ -142,8 +152,10 @@
             <button class="button" type="submit">Отправить</button>
           </form>
         </div>
+      </div>
 
        <h2 class="visually-hidden">Контактная информация</h2>
+      <div class="adres-and-contacts-conteiner">
        <section class="adres-and-contacts">
 
          <p>Адрес главного офиса и офлайн-магазина:</p>
@@ -154,6 +166,7 @@
          <a class="button" href="#">Форма обратной связи</a>
 
         </section>
+      </div>
 
         <h2 class="visually-hidden">Наше расположение на карте</h2>
           <div class="map">
@@ -176,10 +189,12 @@
          <a class="footer-information-item" href="our-documents">Наши документы</a>
          <a class="footer-information-item" href="environmental-standards">Экологические стандарты</a>
        </div>
+       <div class="htmlacademy-copyright">
        <a class="logo-htmlacademy" href="https://htmlacademy.ru/" aria-label="гавная страница htmlacademy">
          <img width="150" src="img/svg/logo-htmlacademy.svg" alt="логотип html academy">
        </a>
        <p>Сделано в <a href="https://htmlacademy.ru/">HTML academy</a> © 2017</p>
+       </div>
      </footer>
     <!--<p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Профессиональный HTML и CSS, уровень 1</a>».</p>-->
   </body>
