@@ -336,7 +336,7 @@ text-decoration: none;
   color: #ffbc9e;
 }
 
-.conteiner-catalog {
+.container-catalog {
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
@@ -357,13 +357,13 @@ text-decoration: none;
   list-style: none;
 }
 
-.conteiner-catalog .button {
+.container-catalog .filter .button {
   background-color: #a9bab0;
   box-shadow: 0 0 0 1px #ffffff;
 }
 
-.conteiner-catalog .button:hover,
-.conteiner-catalog .button:focus {
+.container-catalog .button:hover,
+.container-catalog .button:focus {
   background-color: #ffffff;
   color: #353535;
 }
@@ -431,11 +431,16 @@ text-decoration: none;
 
   align-self: flex-start;
 }
-.Contacts {
+.contacts {
   background-color: black;
   margin: 0 27px;
   padding: 0;
+  display: flex;
+  flex-direction: column;
   align-self: center;
+  position: relative;
+  left: 490px;
+
 }
 
 /*------Слайдер------*/
@@ -500,7 +505,7 @@ text-decoration: none;
   padding: 0;
 }
 
-.advantages-conteiner {
+.advantages-container {
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
@@ -522,17 +527,12 @@ text-decoration: none;
   height: 220px;
 }
 
-.adres-and-contacts-conteiner {
-  margin: 0;
+.adres-and-contacts-container {
+  margin: 0 27px;
   padding: 0;
-  display: flex;
-justify-content: center;
-
-}
-.adres-and-contacts {
   position: relative;
   top: 102px;
-  left: 425px;
+  left: 1195px;
   height: 306px;
   width: 302px;
 }
@@ -540,14 +540,15 @@ justify-content: center;
 .map {
   margin-top: -266px;
   padding: 0;
-    display: flex;
-    justify-content:center;
+  display: flex;
+  justify-content:center;
 }
 
 /*------футер-------*/
 
 .footer {
   margin-top: 20px;
+  margin-bottom: 30px;
   padding: 0;
   display: flex;
   justify-content: center;
@@ -566,26 +567,72 @@ justify-content: center;
 }
 
 /*-------Каталог-------*/
-.ice-creams {
-  margin-bottom: 40px;
+.catalog-header {
+  margin: 0 27px;
   padding: 0;
   display: flex;
   justify-content: center;
 }
+.catalog-header p {
+  margin: 0;
+  padding: 0;
+}
+.catalog-header-container {
+  width: 573px;
+  margin-bottom: 25px;
+  margin-right: 573px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ice-creams-container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.ice-creams {
+  width: 1200px;
+  margin-bottom: 40px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .ice-creams-item {
   width: 267px;
   margin: 0 13px;
   padding: 0;
 }
 
+
+
+
 .pages {
   display: flex;
   justify-content: center;
 }
 
-.filter,
-.fat,
-.fillers {
+.filter-container {
+  margin: 0 27PX;
+  padding: 0;
   display: flex;
+  justify-content: center ;
+}
+.filter {
+  margin-right: 293px;
+  width: 853px;
+  display: flex;
+  flex-wrap: wrap;
 
+}
+.fillers,
+.fat {
+  display: flex;
+}
+.filter .button {
+  margin: 0;
+  padding: 0;
+  align-self: center;
 }

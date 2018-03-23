@@ -35,20 +35,24 @@
           <li class="user-navigation-item"><a class="user-navigation-link" href="basket-link.html">Корзина</a></li>
         </ul>
       </div>
-      <div class="Contacts">
+      <div class="contacts">
         <p class="working-hours">С 10 до 20, ежедневно</p>
         <p class="contact-number">8 812 450-25-25</p>
       </div>
       </nav>
     </header>
     <header class="catalog-header">
-        <a href="index.html">Главная</a>
+      <div class="catalog-header-container">
+        <p><a href="index.html">Главная</a>
         <a href="catalog.html">Каталог</a>
-        <a href="catalog.html">Сливочное</a>
+        <a href="catalog.html">Сливочное</a></p>
+        <h1>Сливочное мороженое</h1>
+      </div>
     </header>
-    <main class="conteiner-catalog">
-    <h1>Сливочное мороженое</h1>
+    <main class="container-catalog">
     <!--Фильтр-->
+
+    <div class="filter-container">
      <form class="filter" action="https://echo.htmlacademy.ru" method="get">
        <fieldset>
          <legend>Сортировка:</legend>
@@ -107,9 +111,10 @@
            </li>
          </ul>
        </fieldset>
-
+       <input class="button" type="submit" value="Применить">
      </form>
-     <input class="button" type="submit" value="Применить">
+   </div>
+     <div class="ice-creams-container">
       <ul class="ice-creams">
         <li class="ice-creams-item">
           <img src="img/catalog-img/logo-ice-cream-1.jpg" alt="логотип сливочное с апельсиновым джемом и цитрусовой стружкой">
@@ -135,8 +140,6 @@
           <a href="busket.html">Сливочное крем-брюле с карамельной подливкой</a>
           <a class="button" href="#">Быстрый просмотр</a>
         </li>
-        </ul>
-        <ul class="ice-creams">
         <li class="ice-creams-item">
           <img src="img/catalog-img/logo-ice-cream-5.jpg" alt="логотип сливочное с брусничным джемом">
             <span>325 ₽/кг</span>
@@ -161,8 +164,6 @@
           <a href="busket.html">Сливочное с шоколадной стружкой</a>
           <a class="button" href="#">Быстрый просмотр</a>
         </li>
-        </ul>
-        <ul class="ice-creams">
         <li class="ice-creams-item">
           <img src="img/catalog-img/logo-ice-cream-9.jpg" alt="логотип сливочно-ванильное с кусочками шоколада">
             <span>440 ₽/кг</span>
@@ -188,6 +189,7 @@
           <a class="button" href="#">Быстрый просмотр</a>
         </li>
       </ul>
+    </div>
       <ul class="pages">
         <li><span>1</span></li>
         <li><a href="catalog2.html">2</a></li>
