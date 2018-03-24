@@ -404,10 +404,6 @@ text-decoration: none;
   flex-direction: column;
 }
 
-.header-logo {
-  background-color: red;
-}
-
 .navigation-wrapper {
   display: flex;
   justify-content: space-between;
@@ -419,20 +415,15 @@ text-decoration: none;
   width: 695px;
   margin: 0;
   padding: 0;
-  background-color: black;
-
 }
 
 .user-navigation {
   width: 267px;
   margin: 0;
   padding: 0;
-  background-color: white;
-
   align-self: flex-start;
 }
 .contacts {
-  background-color: black;
   margin: 0 27px;
   padding: 0;
   display: flex;
@@ -527,21 +518,18 @@ text-decoration: none;
   height: 220px;
 }
 
-.adres-and-contacts-container {
-  margin: 0 27px;
-  padding: 0;
+.map-container {
+  padding-top: 40px;
+  padding-bottom: 140px;
+  width: 1200px;
+  height: 300px;
+  margin: auto;
   position: relative;
-  top: 102px;
-  left: 1195px;
-  height: 306px;
-  width: 302px;
 }
-
-.map {
-  margin-top: -266px;
-  padding: 0;
-  display: flex;
-  justify-content:center;
+.adres-and-contacts {
+  position:absolute;
+  top: 100px;
+  right: 27px;
 }
 
 /*------футер-------*/
