@@ -1,25 +1,59 @@
 body {
   margin: 0;
   padding: 0;
-
+  background-color: #849d8f;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
   line-height: 22px;
   font-weight: 700;
   color: #ffffff;
+  z-index: 4;
 
-  background-color: #849d8f;
 }
+/*Для слайдера*/
+.site-wrapper {
+  min-width: 1200px;
+  background-color: #849d8f;
+  background-image: url("../img/index-img/cream-brule-and-jam.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  transition: background-image 0.5s ease, background-color 0.5s ease;
+}
+.site-wrapper::before,
+.site-wrapper::after {
+  content: "";
+  visibility: hidden;
+}
+
+.site-wrapper::before {
+  background-image: url("img/index-img/chocolate-and-sorbet.png");
+}
+
+.site-wrapper::after {
+  background-image: url("img/ice-cream-and-sherbet.png");
+}
+/*конец "Для слайдера"*/
 .visually-hidden {
   display: none;
 }
-/*Стилизация шапки сайта(навигация) */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 27px;
+}
+/*Стилизация шапки сайта(навигация)*/
 .navigation {
   line-height: 18px;
   color: #ffffff;
 }
 
+.site-navigation li{
+  display: inline;
+  margin-right: 3px;
+  margin-top: 23px;
 
+}
 .site-navigation .user-navigation {
   font-size: 14px;
   line-height: 18px;
@@ -32,7 +66,8 @@ body {
   list-style: none;
 }
 .site-navigation a {
-  color: #ffffff;
+  padding:  7px 14px;
+  color: #ffffff ;
 }
 
 .site-navigation .submenu a {
@@ -44,9 +79,11 @@ text-decoration: none;
   font-weight: 400;
 }
 
- .navigation-item a:hover {
+ .navigation-item a:hover,
+ .navigation-item a:focus {
  background-color: white;
  color: black;
+ border-radius: 50px;
  text-decoration: none;
 }
 .submenu a:hover,
@@ -58,76 +95,246 @@ text-decoration: none;
   background: #fbded8;
 }
 
+.user-navigation .basket-link {
+
+  padding-left: 45px;
+  padding-right: 35px;
+  background-image: url("../img/svg/basket.svg");
+  background-repeat: no-repeat;
+  background-position: 16px 7px;
+}
+.user-navigation .login-link {
+  padding-left: 45px;
+  padding-right: 16px;
+  background-image: url("../img/svg/entrance-white.svg");
+  background-repeat: no-repeat;
+  background-position: 16px 8px ;
+
+}
+.user-navigation .surch-link {
+  padding: 8px 18px;
+  background-image: url("../img/svg/loupe.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.user-navigation-item a {
+  margin-left: 10px;
+  border-radius: 50px;
+  padding: 8px 0;
+  background-color: #9db1a5;
+  text-decoration: none;
+  color: #ffffff;
+}
+.user-navigation .basket-link:hover,
+.user-navigation .basket-link:focus {
+  background-color: #ffffff;
+  color: #000000;
+  background-image: url("../img/svg/basket-red.svg");
+  background-repeat: no-repeat;
+  background-position: 16px 7px;
+}
+
+.user-navigation .login-link:hover,
+.user-navigation .login-link:focus {
+  background-color: #ffffff;
+  color: #000000;
+  background-image: url("../img/svg/entrance.svg");
+  background-repeat: no-repeat;
+  background-position: 16px 8px ;
+}
+.user-navigation .surch-link:hover,
+.user-navigation .surch-link:focus {
+  background-color: #ffffff;
+  color: #000000;
+  background-image: url("../img/svg/loupe-black.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.contacts p:first-child {
+  font-size: 14px;
+  line-height: 16px;
+  padding-bottom: 8px;
+}
+.contacts p:last-child {
+  font-size: 22px;
+  line-height: 24px;
+}
 /*Слайдер Двойное наслаждение*/
 .double-ice-cream {
+  position: relative;
+  padding-top: 280px;
   text-align: center;
 }
 
-.slider-lets-both li:first-child {
-  background-image: url(../img/index-img/cream-brule-and-jam.png);
-}
-.slider-lets-both li:nth-child(2) {
-  background-image: url(../img/index-img/chololate-and-sorbet.png);
-}
-.slider-lets-both li:last-child {
-  background-image: url(../img/index-img/ice-cream-and-sherbet.png);
-}
-
-.lets-both {
+.slider-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
-.lets-both a {
-  text-decoration: none;
-  font-size: 32px;
-  line-height: 44px;
-  padding: 24px 44px;
-  color: #ffffff;
-  background-color: #ed5a3d;
+.slide-title {
+  width: 700px;
+  margin: 0 auto;
+  margin-bottom: 27px;
+
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 800;
 }
-.lets-both a:hover,
-.lets-both a:focus {
-  background-color: #ef7661;
-  box-shadow: 0 2px 2px 0 #9e4334;
+.slide-button {
+  display: inline-block;
+  padding: 12px 44px;
+
+  font-weight: 600;
+  font-size: 31px;
+  line-height: 41px;
+  text-align: center;
+  color: #ffffff;
+  vertical-align: top;
+  text-decoration: none;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+
+  background: #f26843;
+  background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  border-radius: 50px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+  border: none;
+
+  cursor: pointer;
 }
 
-.lets-both:not(:first-child) {
+.button:hover {
+  background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.button:active {
+  background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.slider-controls label {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+
+  vertical-align: top;
+
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.slider-controls label {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+  vertical-align: top;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 63px;
+  left: 27px;
+  z-index: 20;
+
+  font-size: 0;
+}
+
+.slide {
   display: none;
 }
 
-.lets-both label {
-  font-size: 60px;
-  line-height: 60px;
+#product-1:checked ~ .site-wrapper {
+  background-color: #849d8f;
+  background-image: url("../img/index-img/cream-brule-and-jam.png");
 }
 
-/*Специальные предложения*/
+#product-2:checked ~ .site-wrapper {
+  background-color: #8996a6;
+  background-image: url("../img/index-img/chocolate-and-sorbet.png");
+}
+
+#product-3:checked ~ .site-wrapper {
+  background-color: #9d8b84;
+  background-image: url("../img/index-img/ice-cream-and-sherbet.png");
+}
+#product-1:checked ~ .site-wrapper #slide1,
+#product-2:checked ~ .site-wrapper #slide2,
+#product-3:checked ~ .site-wrapper #slide3 {
+  display: block;
+}
+
+#product-1:checked ~ .site-wrapper label[for="product-1"],
+#product-2:checked ~ .site-wrapper label[for="product-2"],
+#product-3:checked ~ .site-wrapper label[for="product-3"] {
+  background-color: #ffffff;
+}
+/*специальные предложения*/
 .raspberries h3,
 .chocolate h3 {
+  margin-top: 20px;
+  margin-bottom: 24px;
+  margin-left: 17px;
   font-size: 35px;
   line-height: 41px;
 }
 .raspberries p,
 .chocolate p {
+  margin-left: 17px;
   font-size: 18px;
   line-height: 22px;
 }
+.button {
+  display: inline-block;
 
+  text-align: center;
+  vertical-align: top;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+
+  background: #f26843;
+  background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  border-radius: 50px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+  border: none;
+
+  cursor: pointer;
+}
 .raspberries a,
 .chocolate a {
+  position: absolute;
+  right: 21px;
+  bottom: 24px;
+  padding: 13px 23px;
   font-size: 18px;
   line-height: 24px;
 }
 
 .raspberries {
+  position: relative;
+  margin: 0;
+  padding: 0;
   background-color: #849d8f;
   background-image: url("../img/index-img/background-raspderries.jpg");
   background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 17px;
 }
 
 .chocolate {
+  position: relative;
   background-color: #849d8f;
   background-image: url("../img/index-img/background-chocolate.jpg");
   background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 17px;
 }
 
 .raspberries a,
@@ -149,21 +356,74 @@ text-decoration: none;
 .ice-cream-hit,
 .ice-creams {
   list-style: none;
+  z-index: 5;
 }
 
+.ice-creams-item::before {
+    display: none;
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: -65px;
+    background-color: rgba(248, 247, 244, 0.3);
+    transition: background-color .5s ease;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 20px 20px rgba(50, 50, 50, 0.3);
+    padding-bottom: 20px;
+}
+.ice-creams-item:hover::before {
+  display: block;
+}
 .ice-cream-hit-item:hover,
-.ice-cream-hit-item:focus,
-.ice-creams-item:hover,
-.ice-creams-item:focus {
-  background-color: #9bafa3;
+.ice-cream-hit-item:focus  {
+  background-color: rgba(245, 245, 245, 0.3);
+  box-shadow: 0 20px 20px rgba(50, 50, 50, 0.3);
+  height: 386px;
+z-index: 15;
 }
 
-.ice-cream-hit-item .button,
+.ice-cream-hit-item{
+  position: relative;
+  border-radius: 5px;
+}
+
+.ice-cream-hit-item::before {
+  position: absolute;
+  content: "";
+  display: table;
+  z-index: 1;
+  top: 10px;
+  left: 10px;
+  width: 61px;
+  height: 61px;
+  background: url(../img/svg/hit.svg);
+}
 .ice-creams-item .button {
   position: absolute;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  bottom: -52px;
+  left: 45px;
+  right: 45px;
   font-size: 18px;
   line-height: 24px;
-  padding: 5px;
+  background-color: #ed5a3d;
+  display: none;
+  text-decoration: none;
+}
+.ice-cream-hit-item .button {
+  position: absolute;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  bottom: 22px;
+  left: 45px;
+  right: 45px;
+  font-size: 18px;
+  line-height: 24px;
   background-color: #ed5a3d;
   display: none;
   text-decoration: none;
@@ -174,20 +434,16 @@ text-decoration: none;
 .ice-creams-item .button:focus {
   background-color: #ef7661;
   box-shadow: 0 2px 2px 0 #9e4334;
+  color: #ffffff;
 }
 .ice-cream-hit-item:hover .button,
 .ice-cream-hit-item:focus .button,
 .ice-creams-item:hover .button,
 .ice-creams-item:focus .button {
   display: block;
+  z-index: 15
 }
 
-.ice-cream-hit-item:hover,
-.ice-cream-hit-item:focus,
-.ice-creams-item:hover,
-.ice-creams-item:focus {
-  background-color: #9bafa3;
-}
 .ice-cream-hit-item a:not(.button):focus,
 .ice-cream-hit-item a:not(.button):hover,
 .ice-creams-item a:not(.button):hover,
@@ -197,9 +453,27 @@ text-decoration: none;
 
 .ice-cream-hit-item a,
 .ice-creams-item a {
+  font-weight: 400;
+  margin-right: 10px;
+  position: absolute;
+  text-align: center;
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
+}
+
+.ice-cream-hit-item img,
+.ice-creams-item img {
+  border-radius: 50%;
+}
+
+.price-ice-cream {
+  font-size: 45px;
+  position: absolute;
+  top: 222px;
+}
+.price-ice-cream span:last-child {
+  font-size: 35px;
 }
 
 /*Преимущества*/
@@ -208,31 +482,46 @@ text-decoration: none;
   background-image: url(../img/index-img/background-wafer.jpg);
   background-repeat: no-repeat;
   color: #323232;
+  border-radius: 10px;
+  height: 308px;
 }
 .about-gllacyshop h3 {
   font-size: 24px;
   line-height: 30px;
+  margin-left: 25px;
+  margin-bottom: 0;
+  padding-bottom: -10px;
 }
 .advantages {
   list-style: none;
 }
 
+.item-advantages {
+  width: 273px;
+}
 /*Блог*/
 .new-from-the-blog {
   background-color: #ffffff;
   background-image: url(../img/index-img/background-blog.jpg);
   background-repeat: no-repeat;
   color: #323232;
+  border-radius: 10px;
 }
 .new-from-the-blog h2 {
   font-size: 16px;
   line-height: 22px;
+  padding-left: 18px;
+  padding-top: 0px;
 }
 
 .new-from-the-blog a {
+  display: block;
   color: #323232;
   font-size: 24px;
   line-height: 30px;
+  padding-left: 18px;
+  width: 285px;
+  height: 100px;
 }
 .new-from-the-blog a:hover,
 .new-from-the-blog a:focus{
@@ -241,11 +530,34 @@ text-decoration: none;
 
 /*Подписка*/
 .subscription {
+  position: relative;
+  background-image: url(../img/svg/bg-post.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
+
+}
+.subscription-item {
+  position: absolute;
+  left: 7px;
+  top: 7px;
+  margin: 0;
+  padding-top: 27px;
+  padding-left: 24px;
+  display: block;
+  width: 522px;
+  height: 178px;
   background-color: #f8f7f4;
   color: #5a5a5a;
+  border-radius: 10px;
 }
 
-.subscription form .button {
+.subscription-item form {
+  position: absolute;
+  bottom: 34px;
+}
+
+.subscription-item form .button {
   color: #ffffff;
   font-size: 18px;
   line-height: 24px;
@@ -264,10 +576,25 @@ text-decoration: none;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
+  width: 303px;
+  height: 305px;
+  border-radius: 10px;
+}
+.adres-and-contacts p {
+  padding-left: 26px;
+  padding-right: 50px;
+  margin-bottom: -15px;
+}
+.adres-and-contacts p:first-child {
+  padding-top: 15px;
+  padding-right: 120px;
+}
+.adres-and-contacts p:nth-child(2),
+.adres-and-contacts p:last-child {
+  margin-bottom: 20px;
 }
 
-.adres-and-contacts p:nth-child(2),
-.adres-and-contacts p:nth-child(4) {
+.adres-and-contacts p:nth-child(2n) {
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
@@ -280,6 +607,10 @@ text-decoration: none;
   line-height: 24px;
   font-weight: 700;
   background-color: #ed5a3d;
+  position: absolute;
+  bottom: 30px;
+  left: 27px;
+  padding: 10px 27px;
 }
 
 .adres-and-contacts a:hover,
@@ -294,8 +625,112 @@ text-decoration: none;
   color: #ffffff;
   font-size: 13px;
   line-height: 18px;
+  padding-bottom: 9px;
+}
+.footer-social {
+  display: inline-block;
+  height: 50px;
+  width: 250px;
+  position: relative;
+}
+.footer-social a {
+  height: 20px;
+  width: 40px;
+  box-shadow:
+             inset 4px 0px 0 0 rgba(248, 247, 244, 0.3),
+             inset -4px 0px 0 0 rgba(248, 247, 244, 0.3),
+             inset 0px 4px 0 0 rgba(248, 247, 244, 0.3),
+             inset 0px -4px 0 0 rgba(248, 247, 244, 0.3);
+  padding-bottom: 20px;
+  border-radius: 50px;
+}
+.footer-social .twitter-link {
+  background-image: url("../img/svg/twitter-no-hv.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 27px;
+}
+.footer-social .instagram-link {
+  background-image: url("../img/svg/instagram-no-hv.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 77px;
+}
+.footer-social .facebook-link {
+  background-image: url("../img/svg/fb-no-hv.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 127px;
+}
+.footer-social .vkontakte-link {
+  background-image: url("../img/svg/vk-no-hv.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 177px;
+}
+ .footer-social .twitter-link:hover,
+ .footer-social .twitter-link:focus{
+  background-image: url("../img/svg/twitter.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 27px;
+}
+.footer-social .instagram-link:hover,
+.footer-social .instagram-link:focus {
+  background-image: url("../img/svg/instagram.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 77px;
+}
+.footer-social .facebook-link:hover,
+.footer-social .facebook-link:focus {
+  background-image: url("../img/svg/fb.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 127px;
+}
+.footer-social .vkontakte-link:hover,
+.footer-social .vkontakte-link:focus {
+  background-image: url("../img/svg/vk.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 177px;
 }
 
+.footer-information {
+  display: flex;
+  justify-content:flex-start;
+  width: 330px;
+  padding-left: 26px;
+  padding-right: 26px;
+  background-image: url("../img/svg/heart.svg");
+  background-repeat: no-repeat;
+  background-position: 5px 3px;
+}
+.footer-information .left,
+.footer-information .right {
+  display: flex;
+  flex-direction: column;
+}
+.footer-information .right {
+  margin-left: 30px;
+}
+
+.htmlacademy-copyright {
+  width: 200px;
+  padding-right: 27px;
+}
+.htmlacademy-copyright p {
+  padding-left: 11px;
+}
 .footer p a {
   color: #ffffff;
 }
@@ -304,7 +739,8 @@ text-decoration: none;
   line-height: 16px;
 }
 
-.footer-information a:not(:first-child),
+.footer-information .left a:not(:first-child),
+.footer-information .right a,
 .footer p {
   font-weight: 400;
 }
@@ -345,6 +781,21 @@ text-decoration: none;
 .filter fieldset{
   border: none;
 }
+.on-popular {
+  width: 190px;
+  height: 37px;
+  padding: 0 14px;
+  border-radius: 20px;
+}
+.fat {
+  border-radius: 20px;
+  padding-right: 13px;
+}
+.fat-content {
+  padding-top: 6px;
+  padding-bottom: 6px;
+
+}
 
 .on-popular,
 .fat,
@@ -352,18 +803,27 @@ text-decoration: none;
   background-color: #a9bab0;
 }
 
+.fillers {
+  padding: 6px 10px;
+  border-radius: 20px;
+}
 .fat,
 .fillers {
   list-style: none;
 }
 
-.container-catalog .filter .button {
+.fillers .fillers-item label {
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+.container-catalog .filter .button-filter{
   background-color: #a9bab0;
   box-shadow: 0 0 0 1px #ffffff;
 }
 
-.container-catalog .button:hover,
-.container-catalog .button:focus {
+.container-catalog .button-filter:hover,
+.container-catalog .button-filter:focus {
   background-color: #ffffff;
   color: #353535;
 }
@@ -374,7 +834,15 @@ text-decoration: none;
 }
 
 .pages {
+  width: 1483px;
+  height: 20px;
   list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+.pages li {
+  padding-left: 5px;
 }
 .pages li a{
   text-decoration: none;
@@ -382,16 +850,26 @@ text-decoration: none;
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 25px;
 }
 
 .pages li a:hover,
 .pages li a:focus {
-  color: #ed5a3d;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .pages li span {
   color: #353535;
   background-color: #ffffff;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 25px;
 }
 
 /*-------------------------Сетка----------------------------*/
@@ -413,78 +891,60 @@ text-decoration: none;
 }
 .site-navigation {
   width: 695px;
-  margin: 0;
+  margin-top: 23px;
   padding: 0;
 }
 
 .user-navigation {
-  width: 267px;
-  margin: 0;
-  padding: 0;
-  align-self: flex-start;
-}
-.contacts {
-  margin: 0 27px;
+  margin-top: 24px;
+  height: auto;
   padding: 0;
   display: flex;
-  flex-direction: column;
-  align-self: center;
-  position: relative;
-  left: 490px;
-
 }
-
-/*------Слайдер------*/
-.slider {
-  margin: 0;
-  padding: 0;
+.contacts p{
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
+  flex-direction: row-reverse;
+  max-width: 1146px;
 }
 
-.slider-lets-both .lets-both {
-  margin top: 280px;
-  height: 210px;
-  width: 666px;
-}
 
 /*-------для специального предложения--------*/
 
 .special-offer {
   margin-bottom: 38px;
   margin-top: 37px;
-  padding: 0;
+  margin-left: 27px;
+  margin-right: 27px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .raspberries {
   height: 230px;
   width: 560px;
-  margin: 0 13px;
-  padding: 0;
+
 }
 
 .chocolate {
   height: 230px;
   width: 560px;
-  margin: 0 13px;
-  padding: 0;
 }
 
 
 /*-------для Лучший выбор-------*/
 
 .best-choise .ice-cream-hit {
-  margin-bottom: 40px;
+  height: 365px;
   padding: 0;
+  margin: 0;
   display: flex;
   justify-content: center;
 }
 .ice-cream-hit-item {
   width: 267px;
-  margin: 0 13px;
-  padding: 0;
+  margin: 0 ;
+  padding: 8px 13px;
 }
 
 /*---------Преемущества---------*/
@@ -500,7 +960,48 @@ text-decoration: none;
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
+  height: 308px;
 }
+.item-advantages:first-child {
+background-image: url("../img/svg/ice-cream.svg");
+background-repeat: no-repeat;
+background-position: 3px 7px;
+}
+.item-advantages:nth-child(2) {
+background-image: url("../img/svg/cow.svg");
+background-repeat: no-repeat;
+background-position: 3px 7px;
+}
+.item-advantages:nth-child(3) {
+background-image: url("../img/svg/eco.svg");
+background-repeat: no-repeat;
+background-position: 3px 7px;
+}
+.item-advantages:last-child {
+background-image: url("../img/svg/thermometer.svg");
+background-repeat: no-repeat;
+background-position: 3px 7px;
+}
+.advantages {
+  position: relative;
+  margin-top: 0;
+}
+.advantages .item-advantages{
+  display: block;
+  position: absolute;
+  left: 30;
+  width: 480px;
+  padding-left: 60px;
+  padding-top: 20px;
+  margin-left: -20px;
+  margin-bottom: -3px;
+}
+
+.advantages .item-advantages:nth-child(2n) {
+  position: relative;
+  left: 572px;
+}
+
 
 /*------Блог и подписка------*/
 .blog-and-subscription {
@@ -535,23 +1036,19 @@ text-decoration: none;
 /*------футер-------*/
 
 .footer {
+  margin: auto;
   margin-top: 20px;
   margin-bottom: 30px;
   padding: 0;
   display: flex;
-  justify-content: center;
-}
-.footer-social {
-  width: 187px;
-  margin-right: 235px;
-}
-.footer-information {
-  width: 330px;
-  margin-right: 230px;
+  justify-content: space-between;
+  width: 1200px;
 }
 
-.htmlacademy-copyright {
-  width: 190px;
+.footer-catalog {
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.6);
+  width: 1146px;
 }
 
 /*-------Каталог-------*/
@@ -578,10 +1075,11 @@ text-decoration: none;
   padding: 0;
   display: flex;
   justify-content: center;
+  z-index: 5;
 }
 .ice-creams {
   width: 1200px;
-  margin-bottom: 40px;
+  position: relative;
   padding: 0;
   display: flex;
   justify-content: center;
@@ -589,17 +1087,14 @@ text-decoration: none;
 }
 
 .ice-creams-item {
+  position: relative;
+  margin-top: 40px;
+  border-radius: 5px;
   width: 267px;
-  margin: 0 13px;
-  padding: 0;
-}
+  min-height: 311px;
+  padding: 8px 13px;
+  margin: 0;
 
-
-
-
-.pages {
-  display: flex;
-  justify-content: center;
 }
 
 .filter-container {
@@ -613,14 +1108,73 @@ text-decoration: none;
   width: 853px;
   display: flex;
   flex-wrap: wrap;
-
+  position: relative;
 }
 .fillers,
 .fat {
   display: flex;
 }
-.filter .button {
-  margin: 0;
-  padding: 0;
+.filter .button-filter {
+  width: 140px;
+  height: 33px;
+  right: -40px;
+  top: 98px;
+  border-radius: 20px;
   align-self: center;
+  position: absolute;
+}
+
+.filter-input {
+  display: none;
+}
+
+.filter-input-checkbox-custom{
+  width: 25px;
+	height: 25px;
+  margin-left: 12px;
+  position: relative;
+  background-image: url("../img/svg/checkbox-off.svg");
+  background-repeat: no-repeat;
+}
+.filter-input-radio-custom {
+	width: 15px;
+	height: 15px;
+	border: 3px solid #fff;
+	border-radius: 3px;
+	position: relative;
+  margin-right: 2px;
+  margin-left: 16px;
+}
+.filter-input-checkbox-custom,
+.filter-input-radio-custom,
+.fat label,
+.fillers label {
+	display: inline-block;
+	vertical-align: middle;
+}
+.filter-input-radio:checked + .filter-input-radio-custom::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  bottom: 3px;
+  left: 3px;
+  background-color: #ffffff;
+  border-radius: 1px;
+}
+.filter-input-checkbox:checked + .filter-input-checkbox-custom::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	background-image: url("../img/svg/checkbox-on.svg");
+  background-repeat: no-repeat;
+}
+.filter-input-radio-custom,
+.filter-input-radio:checked + .filter-input-radio-custom::before {
+	border-radius: 50%;
 }
