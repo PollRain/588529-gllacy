@@ -698,6 +698,7 @@ z-index: 15;
   padding-bottom: 20px;
   border-radius: 50%;
 }
+
 .footer-social .twitter-link {
   background-image: url("../img/svg/twitter-no-hv.svg");
   background-repeat: no-repeat;
@@ -726,8 +727,9 @@ z-index: 15;
   position: absolute;
   left: 177px;
 }
+
  .footer-social .twitter-link:hover,
- .footer-social .twitter-link:active{
+ .footer-social .twitter-link:focus{
   background-image: url("../img/svg/twitter.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -735,7 +737,7 @@ z-index: 15;
   left: 27px;
 }
 .footer-social .instagram-link:hover,
-.footer-social .instagram-link:active {
+.footer-social .instagram-link:focus {
   background-image: url("../img/svg/instagram.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -743,7 +745,7 @@ z-index: 15;
   left: 77px;
 }
 .footer-social .facebook-link:hover,
-.footer-social .facebook-link:active {
+.footer-social .facebook-link:focus {
   background-image: url("../img/svg/fb.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -751,13 +753,83 @@ z-index: 15;
   left: 127px;
 }
 .footer-social .vkontakte-link:hover,
-.footer-social .vkontakte-link:active {
+.footer-social .vkontakte-link:focus {
   background-image: url("../img/svg/vk.svg");
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
   left: 177px;
 }
+
+.footer-social .twitter-link:active {
+  background-image: url("../img/svg/twitter-no-hv.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 27px;
+
+  height: 20px;
+  width: 40px;
+  box-shadow:
+           inset 4px 0px 0 3px rgba(248, 247, 244, 0.3),
+           inset 0px 4px 0 3px rgba(248, 247, 244, 0.3),
+           inset -4px 0px 0 3px rgba(248, 247, 244, 0.3),
+           inset 0px -4px 0 3px rgba(248, 247, 244, 0.3);
+  padding-bottom: 20px;
+  border-radius: 50%;
+}
+.footer-social .instagram-link:active {
+  background-image: url("../img/svg/instagram-no-hv.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 77px;
+
+  height: 20px;
+  width: 40px;
+  box-shadow:
+           inset 4px 0px 0 3px rgba(248, 247, 244, 0.3),
+           inset 0px 4px 0 3px rgba(248, 247, 244, 0.3),
+           inset -4px 0px 0 3px rgba(248, 247, 244, 0.3),
+           inset 0px -4px 0 3px rgba(248, 247, 244, 0.3);
+  padding-bottom: 20px;
+  border-radius: 50%;
+}
+.footer-social .facebook-link:active {
+  background-image: url("../img/svg/fb-no-hv.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 127px;
+
+  height: 20px;
+  width: 40px;
+  box-shadow:
+           inset 4px 0px 0 3px rgba(248, 247, 244, 0.3),
+           inset 0px 4px 0 3px rgba(248, 247, 244, 0.3),
+           inset -4px 0px 0 3px rgba(248, 247, 244, 0.3),
+           inset 0px -4px 0 3px rgba(248, 247, 244, 0.3);
+  padding-bottom: 20px;
+  border-radius: 50%;
+}
+.footer-social .vkontakte-link:active {
+  background-image: url("../img/svg/vk-no-hv.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 177px;
+
+  height: 20px;
+  width: 40px;
+  box-shadow:
+           inset 4px 0px 0 3px rgba(248, 247, 244, 0.3),
+           inset 0px 4px 0 3px rgba(248, 247, 244, 0.3),
+           inset -4px 0px 0 3px rgba(248, 247, 244, 0.3),
+           inset 0px -4px 0 3px rgba(248, 247, 244, 0.3);
+  padding-bottom: 20px;
+  border-radius: 50%;
+}
+
 
 .footer-information {
   display: flex;
