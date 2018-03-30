@@ -17,14 +17,14 @@
 
         <ul class="site-navigation">
           <li class="navigation-item">
-            <a class="navigation-link active" href="catalog.html">Каталог</a>
-            <!--<ul class="submenu">
+            <a class="navigation-link active">Каталог</a>
+            <ul class="submenu">
               <li class="submenu-item"><a class="submenu-link" href="#">Новинки</a></li>
-              <li class="submenu-item"><a class="submenu-link" href="catalog.html">Сливочное</a></li>
+              <li class="submenu-item"><a class="submenu-link submenu-link-active">Сливочное</a></li>
               <li class="submenu-item"><a class="submenu-link" href="catalog.html">Щербеты</a></li>
               <li class="submenu-item"><a class="submenu-link" href="catalog.html">Фруктовый лед</a></li>
               <li class="submenu-item"><a class="submenu-link" href="catalog.html">Мелорин</a></li>
-            </ul>-->
+            </ul>
           </li>
           <li class="navigation-item"><a class="navigation-link" href="delivery-and-payment.html">Доставка и оплата</a></li>
           <li class="navigation-item"><a class="navigation-link" href="about-company.html">О компании</a></li>
@@ -32,7 +32,7 @@
         <ul class="user-navigation">
           <li class="user-navigation-item"><a class="surch-link" href="#"></a></li>
           <li class="user-navigation-item"><a class="login-link" href="login-link.html">Вход</a></li>
-          <li class="user-navigation-item"><a class="basket-link" href="basket-link.html"><span class="visually-hidden">Корзина</span>Пусто</a></li>
+          <li class="user-navigation-item busket-active"><a class="basket-link" href="basket-link.html"><span class="visually-hidden">Корзина</span>2 товара</a></li>
         </ul>
       </div>
       <div class="contacts">
@@ -43,9 +43,9 @@
     </header>
     <header class="catalog-header">
       <div class="catalog-header-container">
-        <p><a href="index.html">Главная</a>
+        <div><a href="index.html">Главная</a>
         <a href="catalog.html">Каталог</a>
-        <a href="catalog.html">Сливочное</a></p>
+        <span>Сливочное</span></div>
         <h1>Сливочное мороженое</h1>
       </div>
     </header>
@@ -57,13 +57,23 @@
        <fieldset>
          <legend>Сортировка:</legend>
          <select class="on-popular">
-           <option value="popular">По популярности</option>
+           <option value="popular">по популярности</option>
+           <option value="inexpensive">сначала недорогие</option>
+           <option value="expensive">сначала дорогие</option>
+           <option value="fat">по жирности</option>
          </select>
        </fieldset>
        <fieldset>
-         <legend>Цена:</legend>
-        <!--Тут будет двойной бегунок с выбором цены-->
-
+         <legend>Цена: 100 руб. - 500 руб.</legend>
+           <div class="range-filter">
+             <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+               </div>
+               <div class="toggle toggle-min"></div>
+               <div class="toggle toggle-max"></div>
+             </div>
+           </div>
        </fieldset>
        <fieldset>
          <legend>Жирность:</legend>
@@ -223,6 +233,7 @@
         </li>
       </ul>
     </div>
+    <div class="pages-countainer">
       <ul class="pages">
         <li><span>1</span></li>
         <li><a href="catalog2.html">2</a></li>
@@ -231,6 +242,7 @@
         <li><a href="catalog5.html">5</a></li>
         <li><a href="catalog6.html">></a></li>
       </ul>
+    </div>
     </main>
 
     <footer class="footer footer-catalog">
@@ -252,10 +264,10 @@
         </div>
       </div>
       <div class="htmlacademy-copyright">
-      <a class="logo-htmlacademy" href="https://htmlacademy.ru/" aria-label="гавная страница htmlacademy">
+      <a class="logo-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="гавная страница htmlacademy">
         <img width="150" src="img/svg/logo-htmlacademy.svg" height="44px" width="111px" alt="логотип html academy">
       </a>
-      <p>Сделано в <a href="https://htmlacademy.ru/">HTML academy</a> © 2017</p>
+      <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML academy</a> © 2017</p>
       </div>
     </footer>
    <!--<p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Профессиональный HTML и CSS, уровень 1</a>».</p>-->
