@@ -34,8 +34,33 @@
           <li class="navigation-item"><a class="navigation-link" href="about-company.html">О компании</a></li>
         </ul>
         <ul class="user-navigation">
-          <li class="user-navigation-item"><a class="surch-link" href="#"><span class="visually-hidden">поиск</span></a></li>
-          <li class="user-navigation-item"><a class="login-link" href="login-link.html">Вход</a></li>
+          <li class="user-navigation-item"><a class="surch-link" href="#"><span class="visually-hidden">поиск</span></a>
+           <form class="surch-menu" action="https://echo.htmlacademy.ru" method="post">
+            <div class="surch-window">
+                <label class="visually-hidden" for="cite-surch">Поле поиска</label>
+                <input class="icon-surch" id="cite-surch" type="text" placeholder="Что ищем?">
+            </div>
+          </form>
+          </li>
+          <li class="user-navigation-item user-login-link"><a class="login-link" href="login-link.html">Вход</a>
+            <div class="modal-login">
+                <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                <p>
+                  <label class="visually-hidden" for="user-mail-login">Логин</label>
+                  <input class="login-icon-user" id="user-mail-login" type="text" name="mail-login" placeholder="Электронная почта">
+                </p>
+                <p>
+                  <label class="visually-hidden" for="user-password">Пароль</label>
+                  <input class="login-icon-password" id="user-password" type="password" name="password-login" placeholder="Пароль">
+                </p>
+                <p class="login-help">
+                  <a class="new-registration" href="#">Новая регистрация</a>
+                  <a class="restore" href="#">Забыли пароль?</a>
+                </p>
+                <button class="button button-login" type="submit">Войти</button>
+              </form>
+            </div>
+          </li>
           <li class="user-navigation-item"><a class="basket-link" href="basket-link.html"><span class="visually-hidden">Корзина</span>Пусто</a></li>
         </ul>
       </div>
@@ -159,7 +184,6 @@
            <div class="subscription-item">
              <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит.
          Обещаем не спамить и не слать всякой ненужной ерунды. Честно:)</p>
-         <!--Форма ввода эетронной почты-->
              <form class="mail-form" action="https://echo.htmlacademy.ru" method="get">
                <input class="mail-window-text"type="text" name="subscription" placeholder="Электронная почта">
                <button class="button" type="submit">Отправить</button>
@@ -177,7 +201,7 @@
          <p>Для заказов по телефону:</p>
          <p>8 812 450-25-25</p>
          <p>(с 10 до 20 ежедневно)</p>
-         <a class="button" href="#">Форма обратной связи</a>
+         <a class="button button-adres-and-contacts" href="#">Форма обратной связи</a>
 
         </section>
         <h2 class="visually-hidden">Наше расположение на карте</h2>
@@ -213,7 +237,60 @@
        <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML academy</a> © 2017</p>
        </div>
      </footer>
-    <!--<p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Профессиональный HTML и CSS, уровень 1</a>».</p>-->
+
+  <section class="modal modal-feedback">
+    <h2>Мы обязательно вам ответим!</h2>
+     <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+      <p>
+        <label class="visually-hidden" for="user-name">Как вас зовут?</label>
+        <input class="login-icon-name" id="user-name" type="text" name="user-name" placeholder="Как вас зовут?">
+      </p>
+      <p>
+        <label class="visually-hidden" for="user-mail">Ваша почта для ответа</label>
+        <input class="login-icon-mail" id="user-mail" type="text" name="user-mail" placeholder="Ваша почта для ответа?">
+      </p>
+      <p>
+        <label class="visually-hidden" for="user-text-feedback">Текст отзыва</label>
+        <textarea class="login-icon-text" id="user-text-feedback" type="text" size="395px" name="text-feedback" placeholder="Напишите что нибудь..."></textarea>
+      </p>
+      <button class="button button-feedback" type="submit">Отправить</button>
+     </form>
+    <button class="modal-close" type="button">Закрыть</button>
+  </section>
+  <div class="modal-overlay"></div>
   </div>
+
+  <script>
+   var link = document.querySelector(".button-adres-and-contacts");
+
+   var popup = document.querySelector(".modal-feedback");
+   var overlay = document.querySelector(".modal-overlay");
+   var close = popup.querySelector(".modal-close");
+
+   var form = popup.querySelector("form");
+   var login = popup.querySelector("[name=user-name]");
+
+   link.addEventListener("click", function (evt) {
+   evt.preventDefault();
+   popup.classList.add("modal-show");
+   login.focus();
+  });
+
+  close.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popup.classList.remove("modal-show");
+  });
+  link.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    overlay.classList.add("modal-show");
+  });
+  close.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    overlay.classList.remove("modal-show");
+   });
+  form.addEventListener("submit", function (evt) {
+    evt.preventDefault();
+  });
+  </script>
   </body>
 </html>

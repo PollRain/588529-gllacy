@@ -247,7 +247,6 @@ padding-bottom: 9px;
   border-radius: 50px;
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
   border: none;
-
   cursor: pointer;
 }
 
@@ -880,6 +879,309 @@ z-index: 15;
   color: #ffbc9e;
 }
 
+/*выподающае окна обратной связи поиска корзины*/
+.modal {
+  position: fixed;
+  color: #000000;
+  background-color: #f8f7f4;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+  z-index: 100;
+  display: none;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+  z-index: 99;
+}
+.modal-feedback {
+  top: 120px;
+  left: 50%;
+  border-radius: 10px;
+  width: 470px;
+  margin-left: -280px;
+  padding-left: 27px;
+  padding-bottom: 27px;
+}
+
+.modal-close {
+  width: 22px;
+  height: 22px;
+  font-size: 0;
+  background-color: #f8f7f4;
+  background-image: url("../img/svg/cross-big.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 12px;
+  right: 13px;
+}
+
+.feedback-form .login-icon-name,
+.feedback-form .login-icon-mail {
+  width: 220px;
+  padding: 10px 15px;
+  padding-right: 40px;
+  margin-bottom: 4px;
+}
+
+.feedback-form .login-icon-text {
+  width: 385px;
+  height: 145px;
+  padding: 10px 15px;
+  padding-right: 40px;
+  resize: none;
+}
+
+.feedback-form .login-icon-name,
+.feedback-form .login-icon-mail,
+.feedback-form .login-icon-text {
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.button-feedback {
+  color: #ffffff;
+  padding: 10px 30px;
+  position: relative;
+  left: 303px;
+}
+
+.modal-show {
+  display: block;
+}
+
+.surch-menu {
+  position: absolute;
+  width: 48px;
+  visibility:hidden;
+  opacity: 0;
+  transition: all .1s ease .1s;
+}
+.surch-window {
+  display: block;
+  color: #000000;
+  background-color: #f8f7f4;
+  box-shadow: 0 15px 70px rgba(0, 0, 0, 0.5);
+  width: 340px;
+  height: 85px;
+  margin-top: 13px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 10px;
+}
+.icon-surch {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 14px;
+  margin-left: 14px;
+  margin-top: 20px;
+  width: 293px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.user-navigation > li:hover .surch-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-busket {
+  padding: 0;
+  margin: 0;
+  height: 0;
+  width: 0;
+  position: absolute;
+}
+.modal-busket-countainer {
+  width: 540px;
+  height: 244px;
+  position: relative;
+  background-color: #ffffff;
+  color: #000000;
+  right: 395px;
+  font-size: 13px;
+  font-weight: 400;
+  border-radius: 10px;
+  margin-top: 15px;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 500;
+  transition: all .1s ease .1s;
+  box-shadow: 0 15px 25px 2px rgba(0, 0, 0, 0.4);
+}
+.modal-busket-item-1 {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.modal-busket-item-2 {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.modal-busket-item-1,
+.modal-busket-item-2 {
+  padding-top: 30px;
+
+}
+.modal-busket-countainer li{
+  padding-left: 20px;
+}
+.modal-busket-item-1 li:nth-child(2),
+.modal-busket-item-2 li:nth-child(2) {
+  width: 220px;
+  padding-right: 0;
+  margin: 0;
+}
+
+.modal-busket-item-1-close {
+  width: 22px;
+  height: 22px;
+  font-size: 0;
+  background-color: #ffffff;
+  background-image: url("../img/svg/cross-small.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  left: 15px;
+  top: 30px;
+}
+.modal-busket-item-2-close {
+  width: 22px;
+  height: 22px;
+  font-size: 0;
+  background-color: #ffffff;
+  background-image: url("../img/svg/cross-small.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  left: 15px;
+  top: 78px;
+}
+.modal-busket-item-1-image {
+  width: 30px;
+  height: 30px;
+  font-size: 0;
+  background-color: #ffffff;
+  background-image: url("../img/busket-ice-cream-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 35px;
+  top: 25px;
+  border-radius: 50%;
+}
+.modal-busket-item-2-image {
+  width: 33px;
+  height: 33px;
+  font-size: 0;
+  background-image: url("../img/busket-ice-cream-2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 35px;
+  top: 75px;
+}
+.busket-total {
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding-bottom: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+.button-busket {
+  padding: 10px 15px !important;
+}
+
+.user-navigation .busket-active:hover .modal-busket-countainer {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-login {
+  position: relative;
+}
+.login-form {
+  position: absolute;
+  background-color: #f8f7f4;
+  width: 270px;
+  height: 209px;
+  top: 20px;
+  right: 1px;
+  border-radius: 10px;
+  box-shadow: 0 15px 70px rgba(0, 0, 0, 0.5);
+  z-index: 500;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .1s ease .1s;
+}
+.modal-login  a {
+  font-size: 13px;
+  color: #000000;
+  font-weight: 400;
+  padding-bottom: 5px;
+}
+.login-icon-user,
+.login-icon-password {
+  width: 222px;
+  color: #000000;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  margin-bottom: 5px;
+  margin-left: 17px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.button-login {
+  padding: 13px 26px;
+  position: absolute;
+  bottom: 17px;
+  left: 18px;
+}
+.login-help {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  width: 135px;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  left: 130px;
+
+}
+.login-help a {
+  padding-bottom: 1px;
+  margin: 0;
+  text-decoration: underline;
+}
+
+.login-help a:hover {
+color: #ffbc9e;
+}
+
+.user-navigation > .user-login-link:hover .login-form {
+  visibility: visible;
+  opacity: 1;
+}
 /*каталог*/
 .site-navigation .catalog {
   background-color: #ed5a3d;
@@ -1105,7 +1407,8 @@ z-index: 15;
   margin: 0 auto;
   display: flex;
   flex-direction: row-reverse;
-  max-width: 1146px;
+  width: 1146px;
+
 }
 
 

@@ -30,10 +30,59 @@
           <li class="navigation-item"><a class="navigation-link" href="about-company.html">О компании</a></li>
         </ul>
         <ul class="user-navigation">
-          <li class="user-navigation-item"><a class="surch-link" href="#"></a></li>
-          <li class="user-navigation-item"><a class="login-link" href="login-link.html">Вход</a></li>
-          <li class="user-navigation-item busket-active"><a class="basket-link" href="basket-link.html"><span class="visually-hidden">Корзина</span>2 товара</a></li>
-        </ul>
+          <li class="user-navigation-item"><a class="surch-link" href="#"><span class="visually-hidden">поиск</span></a>
+           <form class="surch-menu" action="https://echo.htmlacademy.ru" method="post">
+            <div class="surch-window">
+                <label class="visually-hidden" for="cite-surch">Поле поиска</label>
+                <input class="icon-surch" id="cite-surch" type="text" placeholder="Что ищем?">
+            </div>
+          </form>
+          </li>
+          <li class="user-navigation-item user-login-link"><a class="login-link" href="login-link.html">Вход</a>
+            <div class="modal-login">
+                <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                <p>
+                  <label class="visually-hidden" for="user-mail-login">Логин</label>
+                  <input class="login-icon-user" id="user-mail-login" type="text" name="mail-login" placeholder="Электронная почта">
+                </p>
+                <p>
+                  <label class="visually-hidden" for="user-password">Пароль</label>
+                  <input class="login-icon-password" id="user-password" type="password" name="password-login" placeholder="Пароль">
+                </p>
+                <p class="login-help">
+                  <a class="new-registration" href="#">Новая регистрация</a>
+                  <a class="restore" href="#">Забыли пароль?</a>
+                </p>
+                <button class="button button-login" type="submit">Войти</button>
+              </form>
+            </div>
+          </li>
+          <li class="user-navigation-item busket-active">
+            <a class="basket-link" href="basket-link.html"><span class="visually-hidden">Корзина</span>2 товара</a>
+              <section class="modal-busket">
+                <div class="modal-busket-countainer">
+                    <button class="modal-busket-item-1-close" type="button">Закрыть</button>
+                    <ul class="modal-busket-item-1">
+                      <li class="modal-busket-item-1-image"></li>
+                      <li>Пломбир с апельсиновым джемом</li>
+                      <li>1,5 кг х <span>200 руб.</span></li>
+                      <li>300 руб.</li>
+                    </ul>
+                    <button class="modal-busket-item-2-close" type="button">Закрыть</button>
+                    <ul class="modal-busket-item-2">
+                      <li class="modal-busket-item-2-image"></li>
+                      <li>Клубничный пломбир с присыпкой из белого шоколада</li>
+                      <li>1,5 кг х <span>300 руб.</span></li>
+                      <li>450 руб.</li>
+                    </ul>
+                    <div class="busket-total">
+                      <p>Итого: 750 руб.</p>
+                      <a class="button button-busket" href="#">Оформить заказ</a>
+                    </div>
+                  </div>
+              </section>
+            </li>
+          </ul>
       </div>
       <div class="contacts">
         <p class="working-hours">С 10 до 20, ежедневно</p>
