@@ -11,6 +11,7 @@ body {
 }
 
 a {
+  text-decoration-color: rgba(255, 255, 255, 0.6);
   text-decoration-skip-ink: none;
 }
 
@@ -102,7 +103,8 @@ a {
 }
 
 .site-navigation a {
-  padding:  7px 14px;
+  padding:  7px 11px;
+
   color: #ffffff ;
 }
 
@@ -250,7 +252,7 @@ a {
 }
 
 .slide-title {
-  width: 700px;
+  width: 681px;
   margin: 0 auto;
   margin-bottom: 27px;
   font-size: 60px;
@@ -312,8 +314,8 @@ a {
 
 .slider-controls {
   position: absolute;
-  bottom: 23px;
-  left: 27px;
+  bottom: 20px;
+  left: 28px;
   z-index: 20;
   font-size: 0;
 }
@@ -383,11 +385,15 @@ a {
   cursor: pointer;
 }
 
+.raspberries-button,
+.chocolate-button {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 26px;
+  padding-top: 26px;
+}
 .raspberries a,
 .chocolate a {
-  position: absolute;
-  right: 21px;
-  bottom: 24px;
   padding: 10px 21px;
   font-size: 18px;
   line-height: 24px;
@@ -402,6 +408,7 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 17px;
+  background-size: cover;
 }
 
 .chocolate {
@@ -411,6 +418,7 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 17px;
+  background-size: cover;
 }
 
 .raspberries a,
@@ -551,11 +559,19 @@ z-index: 15;
   z-index: 1;
 }
 
-.price-ice-cream {
+.price-ice-cream-hit {
   font-size: 45px;
   position: absolute;
-  top: 234px;
+  top: 226px;
 }
+.price-ice-cream{
+  font-size: 45px;
+  position: absolute;
+  top: 236px;
+}
+
+
+.price-ice-cream-hit span:last-child,
 .price-ice-cream span:last-child {
   font-size: 35px;
 }
@@ -567,22 +583,22 @@ z-index: 15;
   background-repeat: no-repeat;
   color: #323232;
   border-radius: 10px;
-  height: 308px;
+  max-height: 308px;
 }
-.about-gllacyshop h3 {
+.about-gllacyshop h2 {
+  max-height: 25px;
   font-size: 23px;
-  line-height: 30px;
+  line-height: 28px;
   margin-left: 20px;
-  margin-bottom: 0;
-  padding-bottom: -9px;
+  margin-top: 30px;
 }
 .advantages {
   list-style: none;
 }
 
-.item-advantages {
+/*.item-advantages {
   width: 273px;
-}
+}*/
 
 /*Блог*/
 .new-from-the-blog {
@@ -609,6 +625,7 @@ z-index: 15;
   margin-top: 0;
   width: 290px;
   height: 100px;
+  text-decoration: underline;
 }
 
 .new-from-the-blog a:hover,
@@ -1274,7 +1291,9 @@ color: #ffbc9e;
   visibility: visible;
   opacity: 1;
 }
-
+.user-login-link {
+  margin-right: 4px;
+}
 /*каталог*/
 .site-navigation .catalog {
   background-color: #ed5a3d;
@@ -1438,10 +1457,13 @@ color: #ffbc9e;
   list-style: none;
   display: flex;
 }
+.fillers .fillers-item {
+  padding-left: 0; 
+}
 
 .fillers .fillers-item label {
-  margin-right: 12px;
-  margin-left: 5px;
+  margin-right: 9px;
+  margin-left: 8px;
 }
 
 .container-catalog .filter .button-filter{
@@ -1596,10 +1618,11 @@ color: #ffbc9e;
 
 /*---------Преемущества---------*/
 .about-gllacyshop {
-  height: 305px;
-  width: 1146px;
-  margin: 0 13px;
+  min-height: 305px;
+  max-width: 1146px;
+  margin: 0px;
   padding: 0;
+  background-size: cover;
 }
 
 .advantages-container {
@@ -1609,59 +1632,76 @@ color: #ffbc9e;
   min-height: 308px;
 }
 
-.item-advantages:first-child {
-background-image: url("../img/svg/ice-cream.svg");
-background-repeat: no-repeat;
-background-position: 1px 9px;
+.up-advantages .item-advantages:first-child {
+  background-image: url("../img/svg/ice-cream.svg");
+  background-repeat: no-repeat;
+  background-position: 0px 24px;
+  padding-left: 56px
 }
 
-.item-advantages:nth-child(2) {
-background-image: url("../img/svg/cow.svg");
-background-repeat: no-repeat;
-background-position: 1px 9px;
+.up-advantages .item-advantages:last-child {
+  background-image: url("../img/svg/eco.svg");
+  background-repeat: no-repeat;
+  background-position: 0px 10px;
 }
 
-.item-advantages:nth-child(3) {
-background-image: url("../img/svg/eco.svg");
-background-repeat: no-repeat;
-background-position: 1px 14px;
+.down-advantages .item-advantages:first-child {
+  background-image: url("../img/svg/cow.svg");
+  background-repeat: no-repeat;
+  background-position: 10px 21px;
 }
 
-.item-advantages:last-child {
+.down-advantages .item-advantages:last-child{
 background-image: url("../img/svg/thermometer.svg");
 background-repeat: no-repeat;
-background-position: 1px 14px;
+background-position: 10px 9px;
 }
 
 .advantages {
-  position: relative;
-  margin-top: 0;
+  display: flex;
+  padding: 0;
+
 }
 
-.advantages .item-advantages {
-  display: block;
-  position: absolute;
-  left: 30;
-  width: 485px;
-  padding-left: 60px;
+.up-advantages {
+  display: flex;
+  min-height: 185px;
+  width: 1140px;
+  padding-left: 20px;
+  font-weight: 400;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.down-advantages {
+  display: flex;
+  min-height: 105px;
+  padding-right: 22px;
+  font-weight: 400;
+  flex-direction: column;
+}
+
+.up-advantages .item-advantages:first-child {
+  padding-top: 36px;
+}
+
+.up-advantages .item-advantages:last-child {
+  padding-left: 55px;
   padding-top: 20px;
-  margin-left: -20px;
-  margin-bottom: -3px;
+  padding-bottom: 0;
 }
 
-.advantages .item-advantages:nth-child(2n) {
-  position: relative;
-  left: 565px;
+.down-advantages .item-advantages:first-child{
+  padding-top: 34px;
+  padding-left: 69px;
+  padding-bottom: 0
 }
 
-.advantages .item-advantages:nth-child(3) {
-  padding-top: 28px;
-  padding-left: 57px;
+.down-advantages .item-advantages:last-child{
+  padding-left: 69px;
+  padding-top: 22px;
 }
 
-.advantages .item-advantages:nth-child(4) {
-  padding-top: 30px;
-}
 /*------Блог и подписка------*/
 .blog-and-subscription {
   margin-bottom: 20px;
@@ -1765,7 +1805,9 @@ background-position: 1px 14px;
 
 .catalog-header-navigation h1 {
   font-size: 35px;
-  line-height: 1px;
+  line-height: 2px;
+  max-height: 5px;
+  letter-spacing: -1px;
 }
 
 .ice-creams-container {
@@ -1797,6 +1839,13 @@ background-position: 1px 14px;
   padding: 8px 13px;
 }
 
+.ice-cream-name-inner {
+  padding-top: 14px;
+}
+
+.ice-cream-name-inner-hit {
+  padding-top: 6px;
+}
 .filter-container {
   margin: 0 27PX;
   padding: 0;
